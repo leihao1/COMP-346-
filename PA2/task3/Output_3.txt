@@ -1,0 +1,63 @@
+Main thread starts executing.
+Initial value of top = 3.
+Initial value of stack top = d.
+Main thread will now fork several threads.
+Two Consumer threads have been created.
+Two Producer threads have been created.
+One CharStackProber thread has been created.
+Consumer thread [TID=1] starts executing.
+Consumer thread [TID=1] pops character =d
+Consumer thread [TID=1] pops character =c
+Consumer thread [TID=1] pops character =b
+Consumer thread [TID=1] terminates.
+Producer thread [TID=3] starts executing.
+Consumer thread [TID=2] starts executing.
+Consumer thread [TID=2] pops character =a
+CharStackProber thread [TID=5] starts executing.
+Producer thread [TID=4] starts executing.
+1 threads waiting on this semaphore. TID: [5]
+CharStackEmptyException: Char Stack is empty.
+	at CharStack.pop(CharStack.java:76)
+	at StackManager$Consumer.run(StackManager.java:98)
+2 threads waiting on this semaphore. TID: [5, 4]
+Consumer thread [TID=2] pops character =a
+3 threads waiting on this semaphore. TID: [5, 4, 2]
+4 threads waiting on this semaphore. TID: [5, 4, 2, 3]
+3 threads waiting on this semaphore. TID: [4, 2, 3]
+Stack S = ([$],[$],[$],[$],[$],[$],[$],[$],[$],[$])
+4 threads waiting on this semaphore. TID: [4, 2, 3, 5]
+3 threads waiting on this semaphore. TID: [2, 3, 5]
+Producer thread [TID=4] pushes character =a
+4 threads waiting on this semaphore. TID: [2, 3, 5, 4]
+3 threads waiting on this semaphore. TID: [3, 5, 4]
+Consumer thread [TID=2] pops character =a
+Consumer thread [TID=2] terminates.
+2 threads waiting on this semaphore. TID: [5, 4]
+Producer thread [TID=3] pushes character =a
+3 threads waiting on this semaphore. TID: [5, 4, 3]
+2 threads waiting on this semaphore. TID: [4, 3]
+Stack S = ([a],[$],[$],[$],[$],[$],[$],[$],[$],[$])
+3 threads waiting on this semaphore. TID: [4, 3, 5]
+2 threads waiting on this semaphore. TID: [3, 5]
+Producer thread [TID=4] pushes character =b
+3 threads waiting on this semaphore. TID: [3, 5, 4]
+2 threads waiting on this semaphore. TID: [5, 4]
+Producer thread [TID=3] pushes character =c
+3 threads waiting on this semaphore. TID: [5, 4, 3]
+2 threads waiting on this semaphore. TID: [4, 3]
+Stack S = ([a],[b],[c],[$],[$],[$],[$],[$],[$],[$])
+3 threads waiting on this semaphore. TID: [4, 3, 5]
+2 threads waiting on this semaphore. TID: [3, 5]
+Producer thread [TID=4] pushes character =d
+Producer thread [TID=4] terminates.
+1 threads waiting on this semaphore. TID: [5]
+Producer thread [TID=3] pushes character =e
+Producer thread [TID=3] terminates.
+0 threads waiting on this semaphore. TID: []
+Stack S = ([a],[b],[c],[d],[e],[$],[$],[$],[$],[$])
+Stack S = ([a],[b],[c],[d],[e],[$],[$],[$],[$],[$])
+Stack S = ([a],[b],[c],[d],[e],[$],[$],[$],[$],[$])
+System terminates normally.
+Final value of top = 4.
+Final value of stack top = e.
+Final value of stack top-1 = d.
