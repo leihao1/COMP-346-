@@ -1,2 +1,2 @@
-# COMP-346-
+# COMP346
 comp 346 programming assignment
